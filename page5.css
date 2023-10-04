@@ -131,7 +131,7 @@ p {
   #img2 {
     width: 80%;
     height: 80%;
-    background-image: url('../Achopstick/img/bg2.jpg'); /* 设置背景图片的 URL */
+    background-image: url('bg22.jpg'); /* 设置背景图片的 URL */
     background-size: cover;
     position: absolute; /* 绝对定位相对于 #content */
     top: 0;
