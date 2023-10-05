@@ -320,18 +320,20 @@ transform: translate(138px,110px);
 
 #ctext{
 text-align: left;
-transform: translate(-500px,100px);
+font-size: 15px;
+transform: translate(-500px,-80px);
 z-index: 8;
 
 }
 #etext{
+  font-size: 15px;
 text-align: left;
 }
 
 
 .highlight {
     color: rgb(255, 0, 85); /* 更改字体颜色为红色 */
-    font-size: large;
+    font-size: 25px;
     text-shadow: 5px 2px 5px rgb(5, 97, 255);
     font-weight:bolder; /* 设置字体为粗体 */
   }
@@ -409,7 +411,7 @@ text-align: left;
 #footer {
     height: 40px;
     width: auto;
-    
+    font-size: medium;
     background: #c3ff00;
     /* border-radius: 10px; */
     box-shadow:10px 5px 20px #1feb52;

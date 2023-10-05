@@ -1,5 +1,7 @@
 /* refer to cssportal.com*/
-
+a {
+  text-decoration: none;
+}
 @import url("reset.css");
 html{
 
@@ -242,7 +244,7 @@ p {
     font-weight: 800;
    font-size: 40px;
     color: #000000;
-    z-index: 5;
+    z-index: 8;
   }
   #text2:hover {
     /* color: #1feb52;
@@ -273,7 +275,7 @@ p {
 #footer {
     height: 40px;
     width: auto;
-    
+    font-size: medium;
     background: #c3ff00;
     /* border-radius: 10px; */
     box-shadow:10px 5px 20px #1feb52;

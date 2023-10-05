@@ -1,5 +1,7 @@
 /* refer to cssportal.com*/
-
+a {
+  text-decoration: none;
+}
 @import url("reset.css");
 html{
 
@@ -36,6 +38,8 @@ p {
 
 #header {
     border-radius: 5px;
+    font-size: x-large;
+    font-weight: bold;
     height: 75px;
     background: radial-gradient(circle, rgb(255, 218, 218), rgba(255, 255, 255, 0.558));
     /* border-radius: 10px; */
@@ -105,15 +109,28 @@ p {
     transform: translate(-50px, -50px);
   transition: background-image 0.3s ease; /* 添加平滑过渡效果 */
   opacity: 1;
+  z-index: 6;
   }
   #leftcircle:hover  {
     background-image: url('button.png');
     background-size: 95%;
     opacity: 1;
+    z-index: 7;
    
- 
 
   }
+  #leftcircle:hover  {
+    background-image: url('button.png');
+    background-size: 95%;
+    opacity: 1;
+    z-index: 7;
+   
+
+  }
+
+  audio {
+    display: none;
+}
   .image-button {
     width: 100px;
     height: 50px;
@@ -153,9 +170,11 @@ p {
   
   #text:hover {
     color: #1feb52;
-    font-weight: 800;
+    font-weight: 1000;
+    font-size: 40px;
+
   }
-  
+
   #text2 {
     position: relative;
     position: center;
@@ -165,7 +184,16 @@ p {
   }
   #text2:hover {
     color: #1feb52;
-    font-weight: 800;
+    font-weight: 1500;
+    font-size: larger;
+   
+   
+
+  
+  }
+  #text2:hover + audio{
+    
+      display: block;
   }
 #footerwrap {
     width: 1000px;
