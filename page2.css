@@ -5,18 +5,22 @@ html{
 
 
 }
-/* .cent{
-    position: fixed;
-    top: 43%;
+.container {
+  width:100%;
+}
+.cent{
+    position: absolute;
+    width:40vw;
+   
+    /* top: 43%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
     margin-top: 25px;
     margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
-} */
+    text-align: center; */
+}
 a {
     text-decoration: none;
   }
@@ -242,8 +246,10 @@ filter: blur(2px);
     top: 90%;
     left: -300%;
     z-index: 6;
+    cursor: pointer;
 
 }
+
 .parent {
     opacity: 0; /* 初始状态下将不透明度设置为0 */
     display: grid;
@@ -309,10 +315,13 @@ filter: blur(2px);
 
 
 #ctext{
+  top:0;
+  left:0;
 text-align: left;
 font-size: 20px;
-transform: translate(-500px,-600px);
-
+/* transform: translate(-500px,-600px); */
+position: absolute;
+width: 20vw;
 }
 #etext{
   font-size: 20px;
@@ -337,7 +346,9 @@ text-align: left;
 
 
 
-
+.textbut{
+ 
+}
 
 #text {
     position: absolute;
