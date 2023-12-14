@@ -7,7 +7,7 @@ html{
 
 }
 body {
-    font-family: 'Indie Flower', cursive;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, cursive;
     font-size: 13px;  
     width: 200px;
     height: 200px;
@@ -15,14 +15,16 @@ body {
 
   
 }
-
+.container {
+  width:100%;
+}
 p {
     padding: 10px;
 }
 
 #wrapper {
     height: auto;
-    width: auto; /* 设置宽度 */
+    width: auto; 
     background: radial-gradient(circle at center top, red, yellow, green);
 
 }
@@ -60,18 +62,15 @@ p {
 
 #content {
     height: auto;
-    /* background: #fb00c175; */
     background: radial-gradient(at left bottom, rgba(214, 255, 202, 0.75), rgba(255, 0, 195, 0.75)); /* 圆形渐变，从左下角开始 */
     background-size:auto;
-    
-    /* border-radius: 5px; */
-    /* border: 1px solid #eb2495; */
     box-shadow: 10px 5px 20px #1feb52;
     margin: 5px;
+    z-index: 6;
 }
 
 #leftcolumnwrap {
-    width: 150px;
+    width: 50vw;
     float: left;
     margin: 0 auto;
   }
@@ -119,14 +118,7 @@ p {
    
 
   }
-  #leftcircle:hover  {
-    background-image: url('button.png');
-    background-size: 95%;
-    opacity: 1;
-    z-index: 7;
-   
-
-  }
+ 
 
   audio {
     display: none;
@@ -134,8 +126,6 @@ p {
   .image-button {
     width: 100px;
     height: 50px;
-    
-    /* 可选的其他样式属性，如背景颜色、边框等 */
   }
   #leftcolumn::before {
   
@@ -149,7 +139,7 @@ p {
   }
   
  
-  #leftcolumn::after {
+  /* #leftcolumn::after {
    
     width: 120px;
     height: 120px;
@@ -159,8 +149,25 @@ p {
     transform: translate(30px,50px);
     top: 60%;
     left: -30%;
-  }
-  
+  } */
+
+  #leftcolumn::after {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #d618ec, rgb(255, 255, 8));
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(30px, 50px);
+    top: 60%;
+    left: -30%;
+    cursor: pointer; /* Add cursor style for better user experience */
+}
+
+
+
+
+
+
 #text {
     position: absolute;
 

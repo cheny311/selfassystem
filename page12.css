@@ -5,21 +5,21 @@ html{
 
 
 }
-.container{
+.container {
   width:100%;
 }
 .cent{
-  position: absolute;
-  width:40vw;
-    top: 43%;
+    position: absolute;
+    width:40vw;
+   
+    /* top: 43%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 25px;
     margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
-    
+    text-align: center; */
 }
 a {
     text-decoration: none;
@@ -34,8 +34,8 @@ body {
 
   
 }
-img{
-  width:100%
+img {
+  width: 100%;
 }
 p {
     padding:10px;
@@ -90,49 +90,53 @@ p {
     position: relative;
     
 }
-
-  .circle-container {
-
-    width: 200px; /* 圆形容器的宽度 */
-    height: 200px; /* 圆形容器的高度 */
-    border-radius: 50%; /* 创建一个圆形容器 */
-    overflow: hidden; /* 隐藏溢出的部分，以确保内容在容器内部 */
-    position: relative; /* 设置相对定位，以便绝对定位的照片相对于容器 */
-  }
-  
-  .rotating-photo {
-    background-repeat: repeat; /* 设置图像重复显示 */
-    width: 50%; /* 照片的宽度，填满容器 */
-    height: auto; /* 自适应高度 */
-    position: absolute; /* 设置绝对定位，以围绕容器周长旋转 */
-    animation: rotatePhoto 8s linear infinite; /* 应用动画效果 */
-  }
-  
-  @keyframes rotatePhoto {
-    0% {
-      transform: rotate(0deg) translateX(100px) rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg) translateX(100px) rotate(-360deg);
-    }
-  }
-  
-  #img2 {
-    width: 80%;
-    height: 80%;
-    background-image: url('p3.jpg'); /* 设置背景图片的 URL */
-    background-size: cover;
-    position: absolute; /* 绝对定位相对于 #content */
-    top: 0;
-    left: 0;
-    transform: translate(120px, 80px);
-    /* animation: blur 8s infinite; */
-  }
-  
-  
+#img1 {
+    width:100%;
+    height:90%;
+     position:relative; /* 绝对定位相对于 #content */
+     background-image: url('mbody.png');
+     background-size: 100%;
+     scale: 1;
+     z-index: 5;
+     border-radius: 0%;
+     animation: diagonalMove 5s linear infinite;
+     /* transform: translate(158px,105px); */
+     transform: translate(15%,10%);
+     
+   }
+ 
+   @keyframes diagonalMove {
+     0% {
+       /* transform: translate(138px,105px); */
+      
+       scale: 0.88;
+     }
+     50% {
+         /* transform: translate(128px,95px); */
+         scale: 0.95;
+         
+     }
+     100% {
+         /* transform: translate(128px,95px); */
+      
+         scale: 0.88;
+     }
+   }
+   #img2 {
+     width: 80%;
+     height: 80%;
+     background-image: url('manbody.jpg'); /* 设置背景图片的 URL */
+     background-size: cover;
+     position: absolute; /* 绝对定位相对于 #content */
+     top: 0;
+     left: 0;
+     transform: translate(120px, 60px);
+     z-index: 1;
+     /* animation: blur 8s infinite; */
+   }
 #leftcolumnwrap {
     width: 150px;
-    float: right;
+    float: left;
     margin: 0 auto;
   }
   
@@ -154,7 +158,7 @@ p {
     height: 100px;
     background: radial-gradient(circle, rgb(255, 218, 218), rgb(61, 164, 174));
     border-radius: 50%;
-    position: relative;
+    position: absolute;
   }
   
   #leftcircle {
@@ -164,16 +168,15 @@ p {
     background: radial-gradient(circle, rgb(255, 119, 119), rgb(82, 203, 255));
     border-radius: 50%;
     position: absolute;
-    top: 55%;
-    left: 170%;
-    z-index: 8;
-    transform: translate(-250px, -10px);
+    top: 35%;
+    left: 50%;
+    transform: translate(-350px, -50px);
   transition: background-image 0.3s ease; /* 添加平滑过渡效果 */
   opacity: 1;
   }
   #leftcircle:hover  {
-    background-image: url('b3.png');
-    background-size: 100%;
+    background-image: url('bamboo.png');
+    background-size: 90%;
     opacity: 1;
    
  
@@ -183,7 +186,7 @@ p {
     width: 100px;
     height: 50px;
     
-    
+    /* 可选的其他样式属性，如背景颜色、边框等 */
   }
   #leftcolumn::before {
     animation: scale 3s linear infinite alternate;
@@ -218,6 +221,7 @@ p {
 
   #mouse {
     display: flex;
+    align-content: center;
     width: 100px;
     height: 100px;
     background: radial-gradient(circle, rgb(255, 119, 119), rgb(82, 203, 255));
@@ -227,13 +231,11 @@ p {
     left: -300%;
     z-index: 6;
     cursor: pointer;
-   
 
 }
+
 .parent {
     opacity: 0; /* 初始状态下将不透明度设置为0 */
-    display: none; /* 初始状态下隐藏 .parent */
-    /* background-color: #0ff; */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -244,60 +246,55 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    transform: translate(400px,-400px);
-    z-index: 5;
+    transform: translate(50%,-50%);
+    z-index:6;
 }
-#mouse:hover  .parent {
+
+#mouse:hover ~ .parent {
   
-   
+  
     opacity: 1;
     display: grid; /* 鼠标悬停在 #mouse 上时显示 .parent */
-   
+    
     grid-template-columns: repeat(4, 100px); /* 4列，每列宽度为100px */
     grid-template-rows: repeat(3, 50px); /* 3行，每行高度为50px */
     grid-column-gap: 20px; /* 列间距为10px */
-    grid-row-gap: 70px; /* 行间距为20px */
+    grid-row-gap: 50px; /* 行间距为20px */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 7;
 }
 .div1 { grid-area: 4 / 1 / 5 / 2;
     z-index: 6;
     background-size: 100%;
     width: 10vw;
-    /* transform: translate(-100px,-400px); 向左移动20像素，根据需要调整值 */
-    rotate: -30deg;
-    scale: 1.2;
+    /* transform: translate(-190px,90px); 向左移动20像素，根据需要调整值 */
     
     }
     .div2 { grid-area: 2 / 2 / 3 / 3; 
-      width: 10vw;
-        /* transform: translate(120px,-90px);haole */
-       scale: 1.2;
+      width:10vw;
+      
         z-index: 6;
     }
     .div3 { grid-area: 5 / 3 / 6 / 4;
-        /* transform: translate(-340px,-160px); haole */
+        /* transform: translate(-340px,-50px); 向左移动20像素，根据需要调整值 */
        scale: 2.4;
-       width: 10vw;
+      width:10vw;
         z-index: 6;
     }
-  
-    
     .div4 { grid-area: 2 / 4 / 3 / 5;
-        /* transform: translate(-120px,150px); haole */
-      scale: 1.2;
+        /* transform: translate(110px,100px); 向左移动20像素，根据需要调整值 */
+      scale: 2;
+      width:10vw;
         z-index: 6;
-        width: 10vw;
     }
     .div5 { grid-area: 1 / 5 / 2 / 6;
-        /* transform: translate(40px,-20px); */
-        scale: 2;/* haole*/
+        /* transform: translate(50px,-20px); */
+        scale: 1.5;
         z-index: 6;
-        width: 10vw;
+        width:10vw;
     }
 
 
@@ -309,18 +306,16 @@ font-size: 20px;
 /* transform: translate(-500px,-600px); */
 position: absolute;
 width: 20vw;
-
 }
 #etext{
+  font-size: 20px;
 text-align: left;
-font-size: 20px;
 }
 
 
 .highlight {
-  font-size: 25px;
     color: rgb(255, 0, 85); /* 更改字体颜色为红色 */
-   
+    font-size: 25px;
     text-shadow: 5px 2px 5px rgb(5, 97, 255);
     font-weight:bolder; /* 设置字体为粗体 */
   }
@@ -335,7 +330,9 @@ font-size: 20px;
 
 
 
-
+.textbut{
+ 
+}
 
 #text {
     position: absolute;
@@ -344,29 +341,32 @@ font-size: 20px;
     color: #000000;
   }
   
- 
- 
+  /* #text:hover {
+    color: #1feb52;
+    font-weight: 800;
+  }
+   */
   #text2 {
     position: relative;
     position: center;
-    transform: translate(-5px,0px);
+    transform: translate(35px,11px);
     font-weight: 800;
    font-size: 40px;
     color: #000000;
     z-index: 5;
   }
  #text2:hover {
-  
+   
     font-weight: 800;
-    transform: translate(-25px,5px);
+    transform: translate(35px,11px);
   }
   #text3 {
     position: relative;
     position: center;
-    transform: translate(-80px,40px);
+    transform: translate(-55px,40px);
     font-weight: 800;
     color: #000000;
-    z-index: 7;
+    z-index: 5;
   }
   #text3:hover {
     color: #1feb52;
@@ -375,7 +375,7 @@ font-size: 20px;
   #text4 {
     position: relative;
     position: center;
-    transform: translate(1px,20px);
+    transform: translate(15px,20px);
     font-weight: 800;
     color: #000000;
     z-index: 5;
@@ -432,30 +432,28 @@ font-size: 20px;
     position: absolute;
     top: 89%;
     left: 20%;
-    transform: translate(375px,180px);
+    transform: translate(375px,-30px);
     /* transform: translate(-50%, -50%); */
     animation-duration: 2s; /* 动画持续时间 */
     animation-timing-function: ease-in-out; /* 动画缓动函数 */
     animation-iteration-count: infinite ; /* 无限循环动画 */
     z-index: -1;
-    /* animation-name: rotateBlack;  */
   }
   
   .white {
     background-color: #000000; /* 白色圈 */
     position: relative;
-    transform: translateY(60px);
+    animation-name: rotateBlack; /* 使用 rotateBlack 动画 */
     border-radius: 50%;
     width: 20px;
     height: 20px;
 
     /* position: absolute; */
-    /* position: absolute; */
+    position: absolute;
     box-shadow: 5px 0px 10px 2px rgb(221, 255, 0);
     top: 89%;
     left: 20%;
-    /* transform: translate(0px,10px); */
-    /* animation-name: rotateBlack; 使用 rotateBlack 动画 */
+    transform: translate(0px,-30px);
     /* transform: translate(-50%, -50%); */
     animation-duration: 3s; /* 动画持续时间 */
     animation-timing-function: ease-in-out; /* 动画缓动函数 */
@@ -464,7 +462,7 @@ font-size: 20px;
   }
   @keyframes rotateBlack {
     0% {
-	transform: translate(0px,70px) scale(1.2);
+	transform: translate(0,10px) scale(1.2);
      
     }
    
